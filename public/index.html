@@ -8,7 +8,7 @@
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
-
+  <script src="dialog.js"></script>
   <title>Biblioteca</title>
 
   <link rel="stylesheet" href="styles.css" />
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <header >
+  <header>
     <div class="item__header">
       <img src="imagenes/LOGO-UNPRG-.png" class="imagen">
       <h1 class="title">UNPRG<span>|Registro de Libros</span></h1>
@@ -24,6 +24,12 @@
     <button class="icono"><i class="icofont-login"></i></button>
   </header>
   <div class="content">
+    <dialog class="dialog" id="dialog">
+      <div class="item__dialog">
+        <ul id="list" class="content_list"></ul>
+        <button onclick="closeDialog()">Clic para cerrar</button>
+      </div>
+    </dialog>
     <form action="" id="content__add" class="content__add">
       <input type="text" name="titulo" class="content__input" placeholder="Titulo" />
       <input type="text" name="autores" class="content__input" placeholder="Autores" />

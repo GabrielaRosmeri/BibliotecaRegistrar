@@ -43,6 +43,11 @@ url("./fonts/icofont.woff") format("woff");
   content: "\ec55";
 }
 
+.icofont-verification-check:before
+{
+  content: "\f021";
+}
+
 .icofont-xs
 {
   font-size: .5em;

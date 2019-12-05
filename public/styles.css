@@ -124,17 +124,19 @@ body {
 
 .content__input:hover {
     outline: none;
-    border-bottom: 3px solid #88236f;
+    border-bottom: 3px solid #0059ff;
     padding-bottom: 8px;
     transition: all ease 0.2s;
 }
 
-.icofont-ui-edit{
+.icofont-ui-edit,
+.icofont-verification-check {
     background: none;
     border: none;
     font-size: 1.5em;
 }
-.icofont-ui-edit:hover{
+.icofont-ui-edit:hover,
+.icofont-verification-check:hover{
     cursor: pointer;
 }
 form:after {
@@ -156,4 +158,16 @@ form:after {
     font-size: 0.9em;
     color: rgb(255, 255, 255);
     margin-left: 2em;
+}
+
+.dialog{
+    border: none;
+    height: 30em;
+    width: 40em;
+    border-radius: 1em;
+    box-shadow: 3px 10px 25px rgba(123, 100, 253, 0.918);
+}
+.item__dialog{
+    display: flex;
+    flex-flow: column;
 }

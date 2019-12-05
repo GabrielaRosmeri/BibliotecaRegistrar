@@ -1,5 +1,7 @@
 const restList = document.querySelector("#content__list");
 const form = document.querySelector("#content__add");
+const dialog = document.querySelector("#dialog");
+const ejemList = document.querySelector("#list")
 var libros = [
   [
     "0001",
@@ -146,7 +148,7 @@ function cargarDatos() {
       });
   }
 }
-// crear elementos y renderizar restaurants
+// crear elementos y renderizar libros
 function renderRest(doc) {
   let li = document.createElement("li");
   let name = document.createElement("span");
@@ -170,6 +172,18 @@ function renderRest(doc) {
 
   li.appendChild(div);
   li.appendChild(edit);
+  edit.addEventListener("click", function () {
+    dialog.showModal()
+    ejemList.innerHTML = ""
+    db.collection("libros").doc(doc.id).collection("ejemplares")
+      .get()
+      .then(snapshot => {
+        snapshot.docs.forEach(doc => {
+          console.log(doc)
+          renderEjemplar(doc);
+        });
+      });
+  })
 
   restList.appendChild(li);
 
@@ -179,6 +193,7 @@ function renderRest(doc) {
   //     db.collection('restaurant').doc(id).delete();
   // } )
 }
+
 db.collection("libros")
   .get()
   .then(snapshot => {
@@ -201,3 +216,42 @@ form.addEventListener("submit", e => {
   form.autores.value = "";
   form.cantidad.value = "";
 });
+
+function renderEjemplar(doc) {
+  let li = document.createElement("li");
+  let name = document.createElement("input");
+  let city = document.createElement("span");
+  let edit = document.createElement("button");
+  let div = document.createElement("div");
+
+  li.setAttribute("class", "content_item");
+  li.setAttribute("data_id", doc.id);
+
+  edit.setAttribute("class", "icofont-verification-check")
+  div.setAttribute("class", "item__info")
+
+  city.textContent = doc.data().estado;
+  name.setAttribute("placeholder", doc.data().rfid)
+  city.setAttribute("class", "item__span");
+
+  div.appendChild(name);
+  div.appendChild(city);
+
+  li.appendChild(div);
+  li.appendChild(edit);
+  edit.addEventListener("click", function () {
+
+  })
+
+  ejemList.appendChild(li);
+
+  // Borrando datos
+  // cross.addEventListener('click', (e) =>{
+  //     let id = e.target.parentElement.getAttribute('data_id');
+  //     db.collection('restaurant').doc(id).delete();
+  // } )
+}
+
+function closeDialog() {
+  dialog.close()
+}
