@@ -1,63 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
 
-    <title>Biblioteca</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
 
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1 class="title">Bibliotecas Registradas</h1>
-    <div class="content">
-      <form action="" id="content__add">
-        <input
-          type="text"
-          name="titulo"
-          class="content__input"
-          placeholder="Titulo"
-        />
-        <input
-          type="text"
-          name="autores"
-          class="content__input"
-          placeholder="Autores"
-        />
-        <input
-          type="text"
-          name="cantidad"
-          class="content__input"
-          placeholder="Cantidad"
-        />
-        <button class="content__button">Agregar</button>
-      </form>
-      <ul id="content__list" class="content_list"></ul>
+  <title>Biblioteca</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="icofont/icofont.css" />
+</head>
+
+<body>
+  <header >
+    <div class="item__header">
+      <img src="imagenes/LOGO-UNPRG-.png" class="imagen">
+      <h1 class="title">UNPRG<span>|Registro de Libros</span></h1>
     </div>
+    <button class="icono"><i class="icofont-login"></i></button>
+  </header>
+  <div class="content">
+    <form action="" id="content__add" class="content__add">
+      <input type="text" name="titulo" class="content__input" placeholder="Titulo" />
+      <input type="text" name="autores" class="content__input" placeholder="Autores" />
+      <input type="text" name="cantidad" class="content__input" placeholder="Cantidad" />
+      <button class="content__button">Agregar</button>
+    </form>
+    <ul id="content__list" class="content_list"></ul>
+  </div>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#config-web-app -->
 
-    <script>
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyB6YdBjw2CGCYxcd4o_lgiwPusFWV_Qbjw",
-        authDomain: "app-bprestamos.firebaseapp.com",
-        databaseURL: "https://app-bprestamos.firebaseio.com",
-        projectId: "app-bprestamos",
-        storageBucket: "app-bprestamos.appspot.com",
-        messagingSenderId: "638908077364",
-        appId: "1:638908077364:web:c4d285251b361fa8290161",
-        measurementId: "G-86N84HHKVM"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      const db = firebase.firestore();
-    </script>
-    <script src="base.js"></script>
-  </body>
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyB6YdBjw2CGCYxcd4o_lgiwPusFWV_Qbjw",
+      authDomain: "app-bprestamos.firebaseapp.com",
+      databaseURL: "https://app-bprestamos.firebaseio.com",
+      projectId: "app-bprestamos",
+      storageBucket: "app-bprestamos.appspot.com",
+      messagingSenderId: "638908077364",
+      appId: "1:638908077364:web:c4d285251b361fa8290161",
+      measurementId: "G-86N84HHKVM"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+  <script src="base.js"></script>
+</body>
+
 </html>

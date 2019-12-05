@@ -1,68 +1,114 @@
-body{
-    background: rgb(13, 73, 129);
-   
+@import url('https://fonts.googleapis.com/css?family=Hind+Madurai&display=swap');
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgb(14, 5, 145);
+    display: flex;
+    align-items: center;
+    height: 15%;
+    justify-content: space-between;
 }
 
-.title{
-    color: rgb(223, 219, 219);
-    font-size: 3.8em;
-    margin-top: 1em;
-    text-align: center;
+body {
+    margin: 0em;
 }
 
-.content{
-    background: rgb(223, 219, 219);
+.item__header {
+    display: flex;
+    align-items: center;
+}
+
+.imagen {
+    height: 4.5em;
+    margin: 1em;
+}
+
+.icono {
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: white;
+    margin-right: 0.5em;
+}
+
+.icono:hover {
+    cursor: pointer;
+}
+
+.title {
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    margin: 0em;
+    font-family: 'Hind Madurai',
+        sans-serif;
+}
+
+.content {
+    background: rgb(255, 255, 255);
     max-width: 90%;
-    margin: 0.5em auto;
-    padding:  20px 30px;
-    border-radius: 10px 120px 10px 10px;
-     box-shadow: 1px 3px 5px rgba(0,0,0,0.1) 
+    margin: 4em auto;
+    margin-top: 10%;
+    padding: 20px 30px;
+    box-shadow: 3px 10px 25px rgba(10, 0, 65, 0.918);
 }
 
- .content_list{
+.content__add {
+    padding-top: 1em;
+    font-family: 'Hind Madurai', sans-serif;
+}
+
+.content_list {
     list-style-type: none;
     padding: 0;
 }
 
-.content_item{
+.content_item {
     padding: 20px;
     background: #ffffff;
     font-size: 1em;
     color: #555;
     position: relative;
-    border-radius: 0px 80px 0px 0px;
     border-bottom: 1px solid #c0b0b0;
     height: 46px;
-    
+    font-family: 'Hind Madurai',
+    sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
-.content_item:hover{
-    background: rgb(13, 73, 129);
+
+.content_item:hover {
+    background: rgba(0, 102, 255, 0.712);
     color: #ffffff;
 }
 
-.item__span{
+.item__span {
     font-size: 16px;
     margin-top: 6px;
-    color: #999;
+    color: rgb(117, 116, 116);
     display: block;
 }
 
-.content__delete{
+.content__delete {
     position: absolute;
     top: 25%;
     right: 5%;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
     width: 40px;
     text-align: center;
     padding: 10px 0;
-    font-weight:  bold;
-    cursor:  pointer;
+    font-weight: bold;
+    cursor: pointer;
     border-radius: 10px;
     color: black;
 }
 
 
-.content__input{
+.content__input {
     float: left;
     width: 25%;
     border: 0;
@@ -72,31 +118,42 @@ body{
     display: block;
     box-sizing: border-box;
     font-size: 16px;
+    font-family: 'Hind Madurai',
+    sans-serif;
 }
 
-.content__input:hover{
+.content__input:hover {
     outline: none;
     border-bottom: 3px solid #88236f;
     padding-bottom: 8px;
     transition: all ease 0.2s;
 }
 
-form:after{
+.icofont-ui-edit{
+    background: none;
+    border: none;
+    font-size: 1.5em;
+}
+.icofont-ui-edit:hover{
+    cursor: pointer;
+}
+form:after {
     content: '';
     clear: both;
     display: block;
 }
 
-.content__button{
+.content__button {
     border: 0;
-    background: #fff;
+    background: rgb(0, 60, 255);
     border-radius: 10px;
     padding: 13px;
     width: 14%;
-    box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
     font-weight: bold;
-    font-family: ubuntu;
+    font-family: 'Hind Madurai',
+        sans-serif;
     letter-spacing: 1px;
-    color: #999;
+    font-size: 0.9em;
+    color: rgb(255, 255, 255);
+    margin-left: 2em;
 }
- 

@@ -151,16 +151,25 @@ function renderRest(doc) {
   let li = document.createElement("li");
   let name = document.createElement("span");
   let city = document.createElement("span");
+  let edit = document.createElement("button");
+  let div = document.createElement("div");
 
   li.setAttribute("class", "content_item");
   li.setAttribute("data_id", doc.id);
 
+  edit.setAttribute("class", "icofont-ui-edit")
+  div.setAttribute("class", "item__info")
+
   name.textContent = doc.data().titulo;
   city.textContent = doc.data().cantidad;
+
   city.setAttribute("class", "item__span");
 
-  li.appendChild(name);
-  li.appendChild(city);
+  div.appendChild(name);
+  div.appendChild(city);
+
+  li.appendChild(div);
+  li.appendChild(edit);
 
   restList.appendChild(li);
 
